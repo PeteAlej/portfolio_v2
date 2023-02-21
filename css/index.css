@@ -1,0 +1,234 @@
+@import "all.css";
+
+html {                      /* Parámetros generales de todo el documento */
+    overflow-y: scroll;
+}
+
+body {
+    position: absolute;     /* Parámetros que solo aplican al <body> del documento */
+    font-family: Georgia, serif;
+}
+
+.background {
+    position: fixed;    /* Lo que hace fixed es que mantiene el video fijo, sin importar el scroll. */
+    top: 0;             /* top: 0 hace que el video se fije en el punto 0 desde el tope de la página. */
+    left: 0;            /* left: 0 hace que el video se fije en el punto 0 desde la izquierda de la página. */
+    min-width: 100%;    /* Establece que el ancho mínimo del video debe ser del 100%. */
+    min-height: 100%;
+    z-index: -1;
+}
+
+.homepage {
+    width: 100%;
+    height: 100vh;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.banner_img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images\galaxy_wallpaper.jpg");
+    object-fit: none;
+    object-position: 0 0;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 8%;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    position: fixed;
+    /*background-color: darkslateblue;*/
+    z-index: 0;
+}
+
+.topbar-items a .topbar-list {
+    list-style-type: none;
+    display: inline-block;
+    padding-inline: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+}
+
+.topbar-items a .topbar-list:hover {
+    /*background-color:darkseagreen;*/
+    color: white;
+    border: 4px solid white;
+    transition: 0.2s linear;
+    text-decoration: none;
+}
+
+.topbar-list:hover:after {
+    border-radius: 20px;
+}
+
+#topbar-names {
+    display: inline-block;
+    margin-top: 8.5vh;
+    color: green;
+    list-style-type: none;
+    z-index: 3;
+}
+
+.topbar-home {
+    background-color: white;
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+    border: 4px solid white;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.2s linear;
+    position: fixed;
+    top: 9.3%;
+    left: 39.9%;
+    z-index: 5;
+}
+
+.bubble1,  .bubble2, .bubble3, .bubble4 {
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid white;
+    text-decoration: none;
+    position: fixed;
+    opacity: 0;
+    transition: 0.2s linear;
+    z-index: 4;
+    top: 5.5%;
+    left: 41.85%;
+}
+
+.bubble2 {
+    z-index: 6 !important;
+    top: 5.5% !important;
+    left: 47.55% !important;
+}
+
+.bubble3 {
+    z-index: 6 !important;
+    top: 5.5% !important;
+    left: 53.15% !important;
+}
+
+.bubble4 {
+    z-index: 6 !important;
+    top: 5.5% !important;
+    left: 58.75% !important;
+}
+
+.topbar-aboutme {
+    background-color: white;
+    display: inline-block;
+    width: 100px;
+    height: 24px;
+    border: 4px solid white;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.2s linear;
+    position: fixed;
+    top: 9.3%;
+    left: 45%;
+    z-index: 7;
+    opacity: 0;
+}
+
+.topbar-projects {
+    display: inline-block;
+    background-color: white;
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+    border: 4px solid white;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.2s linear;
+    position: fixed;
+    top: 9.3%;
+    left: 51.2%;
+    z-index: 8;
+    opacity: 0;
+}
+
+.topbar-contact {
+    display: inline-block;
+    background-color: white;
+    display: inline-block;
+    width: 130px;
+    height: 24px;
+    border: 4px solid white;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.2s linear;
+    position: fixed;
+    top: 9.3%;
+    left: 55.2%;
+    z-index: 9;
+    opacity: 0;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    z-index: 1;
+}
+
+.welcome-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 20vh;
+    color: white;
+    font-size: 40px;
+}
+
+.self-intro {
+    margin-bottom: 30px;
+}
+
+.small-title {
+    margin-bottom: -20px;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.projects-intro {
+    color: white;
+    position: relative;
+    transform: translateY(450px);
+    opacity: 0;
+    transition: 0.3s all ease;
+}
+
+.projects-intro.active {
+    color: white;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+

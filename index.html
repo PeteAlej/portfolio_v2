@@ -1,0 +1,59 @@
+<html lang="en">
+<!-- <html style="background-color:#83ACC5" lang="en" font=""></html> -->
+<head>
+    <link rel='stylesheet' type='text/css' href='css\index.css' />
+    <script src="js\scripts.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="...">
+    <title>
+        My Portfolio
+    </title>
+</head>
+<body>
+    <div class="homepage">
+        <image src="images\galaxy_wallpaper.jpg" class="banner_img"></image>
+        <video class="background" autoplay loop muted>
+            <source src="mp4/black_space.mp4" type="video/mp4">
+        </video>
+        <nav class="topbar">
+            <ul class="topbar-items">
+                <a href="index.html" id="home" class="active topbar-list" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li class="topbar-list"><i id='home-icon' class='fas fa-house'></i></li></a>
+                <a href="html\aboutme.html" id="aboutme" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li class="topbar-list"><i class="fa-solid fa-circle-user"></i></li></a>
+                <a href="html\projects.html" id="projects" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li class="topbar-list"><i class="fa-regular fa-folder"></i></li></a>
+                <a href="#" id="contact" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li class="topbar-list"><i class="fa-solid fa-address-card"></i></li></a>
+            </ul>
+        </nav>
+        <nav class="titles">
+            <ul id="topbar-names">
+                <li class="topbar-home">Home</li>
+                <li class="topbar-aboutme">About Me</li>
+                <li class="topbar-projects">Projects</li>
+                <li class="topbar-contact">Contact Info</li>
+                <li class="bubble1"></li>
+                <li class="bubble2"></li>
+                <li class="bubble3"></li>
+                <li class="bubble4"></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="welcome-text">
+                <small class="self-intro">Hi, I'm Peter</small>
+                <small class="small-title">Welcome to my</small>
+                <h1>Projects Repository!</h1>
+            </div>
+        </section>
+        <section>
+            <div class="description">
+                <p class="projects-intro">
+                    This repository is a compilation of all the projects I've worked on during my university studies, including class
+                    projects as well as my graduation project and a brief description of the tools and devices I used for the development of
+                    said projects.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
