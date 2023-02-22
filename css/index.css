@@ -1,32 +1,175 @@
 @import "all.css";
 
 html {                      /* Parámetros generales de todo el documento */
-    overflow-y: scroll;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 body {
-    position: absolute;     /* Parámetros que solo aplican al <body> del documento */
+    /*position: absolute; */    /* Parámetros que solo aplican al <body> del documento */
     font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    font-family: Georgia, serif;
+    font-size: 20px;
 }
 
 .background {
     position: fixed;    /* Lo que hace fixed es que mantiene el video fijo, sin importar el scroll. */
     top: 0;             /* top: 0 hace que el video se fije en el punto 0 desde el tope de la página. */
     left: 0;            /* left: 0 hace que el video se fije en el punto 0 desde la izquierda de la página. */
-    min-width: 100%;    /* Establece que el ancho mínimo del video debe ser del 100%. */
-    min-height: 100%;
+    min-width: 100vw;    /* Establece que el ancho mínimo del video debe ser del 100%. */
+    min-height: 100vh;
     z-index: -1;
 }
+/* -------------------------- Sección del navbar -----------------------------*/
+/* Todo el navbar incluyendo las listas y los items dentro de dichas listas. */
+/*.navbar {
+    top: 0%;
+    bottom: 0%;
+    width: 20wh;
+}*/
 
-.homepage {
-    width: 100%;
-    height: 100vh;
-    font-family: Georgia, serif;
-    font-size: 20px;
+/* Cada una de las listas en sí */
+/* Pareciera que los settings se tiene que aplicar al CONTAINER de los items, no al navbar como tal. */
+.nav-items {
+    position: fixed;
+    margin: 0%;     /* Este valor es el que elimina un espacio de separación entre el tope y el navbar. */
+    text-decoration: none;
+    background-color: rgba(120, 120, 120, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    width: 1.5vw;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+/* Items de la lista */
+#home, #aboutme, #projects, #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 5vh;
+    margin-left: -2.8vw;
+    border-radius: 8px;
+    width: 3vw;
+    height: 5vh;
 }
 
+#home:hover, #aboutme:hover, #projects:hover, #contact:hover {
+    border: 4px solid white;
+    transition: 0.1s linear;
+}
+
+.captions, .bubbles {
+    position: fixed;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.8vw;
+    top: 0%;
+    bottom: 0.9%;
+}
+
+.home-cap, .aboutme-cap, .projects-cap, .contact-cap {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6.05vh;
+    width: 120px;
+    height: 30px;
+    background-color: rgba(160, 160, 160, 0.3);
+    border-radius: 0px 8px 8px 0px;
+    opacity: 0;
+}
+
+.home-bubble, .aboutme-bubble, .projects-bubble, .contact-bubble {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid rgba(160, 160, 160, 0.3);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+
+    margin-left: -1.84vw !important;
+    opacity: 0;
+}
+
+.home-bubble {
+    top: 32.9vh;
+}
+
+.aboutme-bubble {
+    top: 42.95vh;
+}
+
+.projects-bubble {
+    top: 52.99vh;
+}
+
+.contact-bubble {
+    top: 63.06vh;
+}
+
+.inicial {
+    color: white;
+    font-size: 60px;
+    margin: 0.6vw;
+    text-shadow: 5px 5px 2px rgba(180, 0, 0, 1);
+}
+
+.welcome-text {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 25vh;
+}
+
+.welcome-text .self-intro {
+    padding-bottom: 2vh;
+}
+
+.welcome-text > small {
+    font-size: 1.5vw;
+}
+
+.welcome-text > h1 {
+    font-size: 4vw;
+    margin-top: -0.05vh;
+}
+
+/*
+.home-cap {
+    color: white;
+    position: fixed;
+    top: 36vh;
+    margin-left: 8vw;
+    background-color: grey;
+    width: 80px;
+    height: 40px;
+
+}
+*/
+/* -----------------------------------------------------------------------------*/
+
+/*
 .banner_img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images\galaxy_wallpaper.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images\nebula_wallpaper.jpg');
     object-fit: none;
     object-position: 0 0;
     position: fixed;
@@ -35,6 +178,7 @@ body {
     width: 100%;
     height: 8%;
 }
+
 
 .topbar {
     display: flex;
@@ -45,7 +189,6 @@ body {
     left: 0%;
     right: 0%;
     position: fixed;
-    /*background-color: darkslateblue;*/
     z-index: 0;
 }
 
@@ -63,7 +206,6 @@ body {
 }
 
 .topbar-items a .topbar-list:hover {
-    /*background-color:darkseagreen;*/
     color: white;
     border: 4px solid white;
     transition: 0.2s linear;
@@ -229,6 +371,6 @@ section {
     transform: translateY(0);
     opacity: 1;
 }
-
+*/
 
 
