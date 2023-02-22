@@ -40,6 +40,7 @@ body {
 .nav-items {
     position: fixed;
     margin: 0%;     /* Este valor es el que elimina un espacio de separación entre el tope y el navbar. */
+    padding: 0%;
     text-decoration: none;
     background-color: rgba(120, 120, 120, 0.2);
     display: flex;
@@ -47,19 +48,18 @@ body {
     align-items: center;
     justify-content: center;
     list-style-type: none;
-    width: 1.5vw;
+    width: 4vw;
     top: 0%;
     bottom: 0%;
-    left: 0%;
 }
 /* Items de la lista */
-#home, #aboutme, #projects, #contact {
+a#home, a#aboutme, a#projects, a#contact {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     color: white;
     margin-top: 5vh;
-    margin-left: -2.8vw;
     border-radius: 8px;
     width: 3vw;
     height: 5vh;
