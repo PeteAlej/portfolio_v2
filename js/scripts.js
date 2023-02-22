@@ -17,6 +17,7 @@ function scrollReveal() {
 
 function viewNavNames(obj) {
     let navElement = obj.id;
+    let currentIcon = document.getElementById(navElement);
     switch(navElement){
         case "home":
             element = document.getElementsByClassName("home-cap");
@@ -43,10 +44,12 @@ function viewNavNames(obj) {
             arrow[0].style.opacity = 1;
             break;
     }
+    currentIcon.style.opacity = 0;
 }
 
 function hideNavNames(obj) {
     let navElement = obj.id;
+    currentIcon = document.getElementById(navElement);
     switch(navElement){
         case "home":
             element = document.getElementsByClassName("home-cap");
@@ -73,6 +76,7 @@ function hideNavNames(obj) {
             arrow[0].style.opacity = 0;
             break;
     }
+    currentIcon.style.opacity = 1;
 }
 
 
