@@ -103,25 +103,24 @@ body {
     border-right: 15px solid rgba(160, 160, 160, 0.3);
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-
     margin-left: -1.84vw !important;
     opacity: 0;
 }
 
 .home-bubble {
-    top: 32.9vh;
+    top: 31.9vh;
 }
 
 .aboutme-bubble {
-    top: 42.95vh;
+    top: 41.95vh;
 }
 
 .projects-bubble {
-    top: 52.99vh;
+    top: 51.9vh;
 }
 
 .contact-bubble {
-    top: 63.06vh;
+    top: 61.95vh;
 }
 
 .inicial {
@@ -131,7 +130,7 @@ body {
     text-shadow: 5px 5px 2px rgba(180, 0, 0, 1);
 }
 
-.welcome-text {
+.welcome {
     display: flex;
     justify-items: center;
     align-items: center;
@@ -140,18 +139,55 @@ body {
     margin-top: 25vh;
 }
 
-.welcome-text .self-intro {
+.welcome .self-intro {
     padding-bottom: 2vh;
 }
 
-.welcome-text > small {
-    font-size: 1.5vw;
+.welcome > small {
+    font-size: 2vw;
 }
 
-.welcome-text > h1 {
-    font-size: 4vw;
-    margin-top: -0.05vh;
+.welcome .welcome-text {
+    font-size: 2.5vw;
 }
+
+.welcome > h1 {
+    font-size: 4vw;
+    margin-top: 3vh;
+}
+
+.neonText {
+    text-shadow:
+        0px 0px 21px rgba(255, 255, 255, 1),
+        0px 0px 31px rgba(255, 255, 255, 1),
+        0px 0px 41px rgba(255, 255, 255, 1),
+        0px 0px 51px rgba(70, 39, 255, 1),
+        0px 0px 61px rgba(70, 39, 255, 1),
+        0px 0px 71px rgba(70, 39, 255, 1),
+        0px 0px 81px rgba(70, 39, 255, 1),
+        0px 0px 91px rgba(70, 39, 255, 1),
+        0px 0px 101px rgba(70, 39, 255, 1);
+    transform: neonEffect 2s infinite;
+}
+
+/*
+@keyframes neonEffect {
+    0% {text-shadow:
+        0px 0px 21px rgba(255, 255, 255, 1),
+        0px 0px 31px rgba(255, 255, 255, 1),
+        0px 0px 41px rgba(255, 255, 255, 1),
+        0px 0px 51px rgba(70, 39, 255, 1),
+        0px 0px 61px rgba(70, 39, 255, 1),
+        0px 0px 71px rgba(70, 39, 255, 1);}
+    100% {text-shadow:
+        0px 0px 10px rgba(255, 255, 255, 1),
+        0px 0px 21px rgba(255, 255, 255, 1),
+        0px 0px 32px rgba(255, 255, 255, 1),
+        0px 0px 43px rgba(70, 39, 255, 1),
+        0px 0px 54px rgba(70, 39, 255, 1),
+        0px 0px 65px rgba(70, 39, 255, 1);}
+}
+*/
 
 /*
 .home-cap {
