@@ -49,7 +49,7 @@ function viewNavNames(obj) {
 
 function hideNavNames(obj) {
     let navElement = obj.id;
-    currentIcon = document.getElementById(navElement);
+    let currentIcon = document.getElementById(navElement);
     switch(navElement){
         case "home":
             element = document.getElementsByClassName("home-cap");

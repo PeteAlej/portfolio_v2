@@ -30,16 +30,62 @@ body {
 /* -------------------------- Sección del navbar -----------------------------*/
 /* Todo el navbar incluyendo las listas y los items dentro de dichas listas. */
 .navbar {
-    top: 0%;
-    bottom: 0%;
-    width: 20vw;
+    position: fixed;
+    height: 100vh;
 }
 
-/* Cada una de las listas en sí */
-/* Pareciera que los settings se tiene que aplicar al CONTAINER de los items, no al navbar como tal. */
+.nav-items {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 120px;
+    height: 100vh;
+    border: 4px white solid;
+    z-index: 2;
+}
+
+.captions {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 120px;
+    height: 100vh;
+    z-index: 1;
+}
+
+.nav-items > a {
+    padding: 3vh;
+    border: 4px white solid;
+}
+
+.captions > li {
+    color: green;
+    padding: 3.5vh;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*
+/* Cada una de las listas en sí *
+/* Pareciera que los settings se tiene que aplicar al CONTAINER de los items, no al navbar como tal. *
 .nav-items {
     position: fixed;
-    margin: 0%;     /* Este valor es el que elimina un espacio de separación entre el tope y el navbar. */
+    margin: 0%;     /* Este valor es el que elimina un espacio de separación entre el tope y el navbar. *
     padding: 0%;
     text-decoration: none;
     background-color: rgba(120, 120, 120, 0.2);
@@ -53,7 +99,7 @@ body {
     bottom: 0%;
     z-index: 5;
 }
-/* Items de la lista */
+/* Items de la lista *
 a#home, a#aboutme, a#projects, a#contact {
     display: flex;
     align-items: center;
@@ -70,7 +116,6 @@ a#home, a#aboutme, a#projects, a#contact {
     transition: 0.1s linear;
 }
 
-/* Hay que agregar de vuelta .bubbles */
 .captions {
     position: fixed;
     margin: 0 0 0 0;
@@ -93,7 +138,7 @@ a#home, a#aboutme, a#projects, a#contact {
     margin: 6vh 0 0 0.12vw;
     width: 70px;
     height: 30px;
-    /*background-color: rgba(160, 160, 160, 0.3);*/
+    /*background-color: rgba(160, 160, 160, 0.3);*
     border-radius: 8px 8px 8px 8px;
     opacity: 0;
     transition: 0.1s linear;
@@ -102,42 +147,6 @@ a#home, a#aboutme, a#projects, a#contact {
 .aboutme-cap {
     font-size: 16px;
 }
-/*
-.home-bubble, .aboutme-bubble, .projects-bubble, .contact-bubble {
-    /*position: absolute;*
-    display: flex;
-    width: 0px;
-    height: 0px;
-    border-left: 15px solid transparent;
-    border-right: 15px solid rgba(160, 160, 160, 0.3);
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    margin: 6.15vh 0 0 1.95vw;
-    /*margin-left: -1.84vw !important;*
-    opacity: 1;
-}
-*/
-.bubbles {
-    bottom: 1.5vh !important;
-}
-
-/*
-.home-bubble {
-    top: 31.9vh;
-}
-
-.aboutme-bubble {
-    top: 41.95vh;
-}
-
-.projects-bubble {
-    top: 51.9vh;
-}
-
-.contact-bubble {
-    top: 61.95vh;
-}
-*/
 
 .inicial {
     position: fixed;
@@ -207,225 +216,3 @@ a#home, a#aboutme, a#projects, a#contact {
         0px 0px 65px rgba(70, 39, 255, 1);}
 }
 */
-
-/*
-.home-cap {
-    color: white;
-    position: fixed;
-    top: 36vh;
-    margin-left: 8vw;
-    background-color: grey;
-    width: 80px;
-    height: 40px;
-
-}
-*/
-/* -----------------------------------------------------------------------------*/
-
-/*
-.banner_img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images\nebula_wallpaper.jpg');
-    object-fit: none;
-    object-position: 0 0;
-    position: fixed;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 8%;
-}
-
-
-.topbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 8%;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    position: fixed;
-    z-index: 0;
-}
-
-.topbar-items a .topbar-list {
-    list-style-type: none;
-    display: inline-block;
-    padding-inline: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: -20px;
-    margin-bottom: -20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 20px;
-}
-
-.topbar-items a .topbar-list:hover {
-    color: white;
-    border: 4px solid white;
-    transition: 0.2s linear;
-    text-decoration: none;
-}
-
-.topbar-list:hover:after {
-    border-radius: 20px;
-}
-
-#topbar-names {
-    display: inline-block;
-    margin-top: 8.5vh;
-    color: green;
-    list-style-type: none;
-    z-index: 3;
-}
-
-.topbar-home {
-    background-color: white;
-    display: inline-block;
-    width: 80px;
-    height: 24px;
-    border: 4px solid white;
-    border-radius: 12px;
-    text-align: center;
-    opacity: 0;
-    transition: 0.2s linear;
-    position: fixed;
-    top: 9.3%;
-    left: 39.9%;
-    z-index: 5;
-}
-
-.bubble1,  .bubble2, .bubble3, .bubble4 {
-    width: 0px;
-    height: 0px;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid white;
-    text-decoration: none;
-    position: fixed;
-    opacity: 0;
-    transition: 0.2s linear;
-    z-index: 4;
-    top: 5.5%;
-    left: 41.85%;
-}
-
-.bubble2 {
-    z-index: 6 !important;
-    top: 5.5% !important;
-    left: 47.55% !important;
-}
-
-.bubble3 {
-    z-index: 6 !important;
-    top: 5.5% !important;
-    left: 53.15% !important;
-}
-
-.bubble4 {
-    z-index: 6 !important;
-    top: 5.5% !important;
-    left: 58.75% !important;
-}
-
-.topbar-aboutme {
-    background-color: white;
-    display: inline-block;
-    width: 100px;
-    height: 24px;
-    border: 4px solid white;
-    border-radius: 12px;
-    text-align: center;
-    transition: 0.2s linear;
-    position: fixed;
-    top: 9.3%;
-    left: 45%;
-    z-index: 7;
-    opacity: 0;
-}
-
-.topbar-projects {
-    display: inline-block;
-    background-color: white;
-    display: inline-block;
-    width: 80px;
-    height: 24px;
-    border: 4px solid white;
-    border-radius: 12px;
-    text-align: center;
-    transition: 0.2s linear;
-    position: fixed;
-    top: 9.3%;
-    left: 51.2%;
-    z-index: 8;
-    opacity: 0;
-}
-
-.topbar-contact {
-    display: inline-block;
-    background-color: white;
-    display: inline-block;
-    width: 130px;
-    height: 24px;
-    border: 4px solid white;
-    border-radius: 12px;
-    text-align: center;
-    transition: 0.2s linear;
-    position: fixed;
-    top: 9.3%;
-    left: 55.2%;
-    z-index: 9;
-    opacity: 0;
-}
-
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 10px;
-    z-index: 1;
-}
-
-.welcome-text {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-top: 20vh;
-    color: white;
-    font-size: 40px;
-}
-
-.self-intro {
-    margin-bottom: 30px;
-}
-
-.small-title {
-    margin-bottom: -20px;
-}
-
-.description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-
-.projects-intro {
-    color: white;
-    position: relative;
-    transform: translateY(450px);
-    opacity: 0;
-    transition: 0.3s all ease;
-}
-
-.projects-intro.active {
-    color: white;
-    transform: translateY(0);
-    opacity: 1;
-}
-*/
-
-
