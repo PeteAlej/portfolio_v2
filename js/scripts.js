@@ -1,21 +1,20 @@
 // Funciones
 
-function scrollReveal() {
-    let elements = document.querySelectorAll(".projects-intro");
-    for(let i = 0; i < elements.length; i++){
-        let windowHeight = window.innerHeight;
-        let elementsTop = elements[i].getBoundingClientRect().top;
-        let elementVisible = 150;
-        if (elementsTop < windowHeight - elementVisible) {
-            elements[i].classList.add("active");
-        } 
-        else {
-            elements[i].classList.remove("active");
-        }
-    }
-}
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        entry.target.classList.toggle("active", entry.isIntersecting);
+    });
+});
+
+// Inicializando el observador para ir observando si el objeto tiene intersección con el viewport.
+
+const item = document.querySelectorAll(".intro");
+item.forEach((elem) => {
+    observer.observe(elem);
+});
 
 function viewNavNames(obj) {
+    let element = 0;
     let navElement = obj.id;
     let currentIcon = document.getElementById(navElement);
     switch(navElement){
@@ -62,8 +61,3 @@ function hideNavNames(obj) {
     }
     currentIcon.style.opacity = 1;
 }
-
-
-// Constantemente chequeando los eventos
-
-window.addEventListener("scroll", scrollReveal);

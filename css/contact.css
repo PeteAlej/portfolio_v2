@@ -1,0 +1,118 @@
+@import "all.css";
+
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box;
+     font-family: Georgia, serif;
+}
+
+body {
+    /*position: absolute; */    /* Parámetros que solo aplican al <body> del documento */
+    margin: 0;
+    padding: 0;
+
+}
+
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.background {
+    position: fixed;    /* Lo que hace fixed es que mantiene el video fijo, sin importar el scroll. */
+    top: 0;             /* top: 0 hace que el video se fije en el punto 0 desde el tope de la página. */
+    left: 0;            /* left: 0 hace que el video se fije en el punto 0 desde la izquierda de la página. */
+    min-width: 100vw;    /* Establece que el ancho mínimo del video debe ser del 100%. */
+    min-height: 100vh;
+    z-index: -1;
+}
+/* -------------------------- Sección del navbar -----------------------------*/
+/* Todo el navbar incluyendo las listas y los items dentro de dichas listas. */
+.navbar {
+    position: fixed;
+    height: 100vh;
+}
+
+.nav-items {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 5.8vw;
+    height: 100vh;
+    background-color: rgba(120, 120, 120, 0.2);
+    z-index: 999;
+}
+
+.captions {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0.4vh;
+    width: 5.8vw;
+    height: 100vh;
+    font-size: 1.2vw;
+    z-index: 998;
+}
+
+.nav-items > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 4vw;
+    height: 8vh;
+    /*margin: 3vh;
+    padding: 3vh;*/
+    opacity: 1;
+}
+
+.current-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(120, 120, 120, 0.2);
+    border-radius: 12px;
+    border: 3px white solid;
+    width: 5.8vw;
+}
+
+.captions > li {
+    color: white;
+    width: 4vw;
+    height: 8vh;
+    /*margin: 2.5vh;
+    margin-top: 0;
+    padding: 2.5vh;*/
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.inicial {
+    position: fixed;
+    color: white;
+    font-size: 5vw;
+    margin: 0 0 0 1.25vw;
+    top: 0;
+    bottom: 100%;
+    text-shadow: 5px 5px 2px rgba(180, 0, 0, 1);
+    z-index: 5;
+}

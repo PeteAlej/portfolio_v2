@@ -1,8 +1,8 @@
 <html lang="en">
 <!-- <html style="background-color:#83ACC5" lang="en" font=""></html> -->
 <head>
-    <link rel='stylesheet' type='text/css' href='css\index.css' />
-    <script src="js\scripts.js"></script>
+    <link rel='stylesheet' type='text/css' href='css/index.css' />
+    <script defer src="js/scripts.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,10 +19,10 @@
         </video>
         <nav class="navbar">
             <ul class="nav-items">
-                <a href="index.html" id="home" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li><i class='fas fa-house'></i></li></a>
-                <a href="html\aboutme.html" id="aboutme" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li><i class="fa-solid fa-circle-user"></i></li></a>
-                <a href="html\projects.html" id="projects" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li><i class="fa-regular fa-folder"></i></li></a>
-                <a href="#" id="contact" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li><i class="fa-solid fa-address-card"></i></li></a>
+                <a href="index.html" id="home" class="current-tab" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li><i class='fas fa-house'></i></li></a>
+                <a href="html/aboutme.html" id="aboutme" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li><i class="fa-solid fa-circle-user"></i></li></a>
+                <a href="html/projects.html" id="projects" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li><i class="fa-regular fa-folder"></i></li></a>
+                <a href="html/contactme.html" id="contact" onmouseover="viewNavNames(this)" onmouseleave="hideNavNames(this)"><li><i class="fa-solid fa-address-card"></i></li></a>
             </ul>
             <ul class="captions">
                 <li class="home-cap">Home</li>
@@ -31,22 +31,6 @@
                 <li class="contact-cap">Contact <br>Me</br></li>
             </ul>
         </nav>
-    <!--    <div>
-            <ul class="captions">
-                <li class="home-cap">Home</li>
-                <li class="aboutme-cap">About Me</li>
-                <li class="projects-cap">Projects</li>
-                <li class="contact-cap">Contact</li>
-            </ul>
-        </div>
-        <div>
-            <ul class="bubbles">
-                <li class="home-bubble"></li>
-                <li class="aboutme-bubble"></li>
-                <li class="projects-bubble"></li>
-                <li class="contact-bubble"></li>
-            </ul>
-        </div>
         <div>
             <h1 class="inicial">P</h1>
         </div>
@@ -56,29 +40,21 @@
                 <small class="welcome-text neonText">Welcome to my</small>
                 <h1 class="neonText">Project Repository!</h1>
             </div>
-        </section>-->
-        <!--
-        <nav class="titles">
-            <ul id="topbar-names">
-                <li class="topbar-home">Home</li>
-                <li class="topbar-aboutme">About Me</li>
-                <li class="topbar-projects">Projects</li>
-                <li class="topbar-contact">Contact Info</li>
-                <li class="bubble1"></li>
-                <li class="bubble2"></li>
-                <li class="bubble3"></li>
-                <li class="bubble4"></li>
-            </ul>
-        </nav>
-        <section>
-            <div class="description">
-                <p class="projects-intro">
-                    This repository is a compilation of all the projects I've worked on during my university studies, including class
-                    projects as well as my graduation project and a brief description of the tools and devices I used for the development of
-                    said projects.
-                </p>
-            </div>
-        </section> -->
+        </section>
+        <section class="desc">
+            <img class="intro user-icon" src="images\user.png">
+            <p class="intro myself">
+                Hi, my name is Peter, I graduated from university as a Mechatronic Engineer, although throughout my career I found out
+                my passion is in the area of programming. Although I do have a higher inclination in said area, I don't close myself to
+                opportunities outside of this area, which is shown in my experience in the area of telecommunications.
+            </p>
+            <p class="intro projects">
+                This repository is a compilation of all the projects I've worked on during my university studies, including class
+                projects as well as my graduation project and a brief description of the tools and devices I used for the development of
+                said projects. Funny thing is, this page in itself is a project I'm working on in order to transfer all my projects to a
+                website instead of hosting them in a blog.
+            </p>
+        </section>
     </div>
 </body>
 </html>
